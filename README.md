@@ -9,6 +9,4 @@ I will use functional React components to create an app that manages contacts an
 
 I will work with stateful and stateless functional React components using hooks.
 
-I will use more of a TDD approach to this project using Jest.
-
 This README will be updated once this project is complete.
