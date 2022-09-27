@@ -10,7 +10,7 @@ export const ContactForm = ({
   handleSubmit
 }) => {
   return (
-    <form  onSubmit={()=>{}}>
+    <form  onSubmit={handleSubmit}>
       <label>
         <input value={name} type='text' onChange={(e)=> setName(e.target.value) } 
         required placeholder='Contact Name' />
