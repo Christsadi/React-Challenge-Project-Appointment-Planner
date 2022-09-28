@@ -6,7 +6,7 @@ export const TileList = ({tiles}) => {
   return (
     <div>
       {tiles.map((tile, idx)=>(
-         <Tile ile={tile} key={idx}/>
+         <Tile tile={tile} key={idx}/>
       )  
       )}
       

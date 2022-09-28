@@ -1,5 +1,6 @@
 import React from "react";
-import ContactPicker from "../contactPicker/ContactPicker";
+
+import { ContactPicker } from "../contactPicker/ContactPicker";
 
 export const AppointmentForm = ({
   contacts,
@@ -20,29 +21,55 @@ export const AppointmentForm = ({
     return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
   };
 
-  const getContactName = ()=>{
-    return contacts.map((contact) => contact.name)
+  const getContactNames = () => {
+    return contacts.map((contact) => contact.name);
   };
 
   return (
     <form onSubmit={handleSubmit} >
       <label>
-        <input value={title} type='text' required placeholder='Appointment Title' onChange={(e)=> setTitle(e.target.value)} />
+        <input
+          type="text"
+          name="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+          placeholder="Appointment Title"
+        />
       </label>
       <br />
       <label>
-        <input value={date} type='date' onChange={(e)=> setDate(e.target.value) } required min={getTodayString}/>
+        <ContactPicker
+          name="contact"
+          value={contact}
+          contacts={getContactNames()}
+          onChange={(e) => setContact(e.target.value)}
+          placeholder="Appointment With"
+        />
       </label>
       <br />
       <label>
-        <input value={time} type='time' required onChange={(e)=> setTime(e.target.value)} />
+        <input
+          type="date"
+          name="date"
+          min={getTodayString()}
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          required
+        />
       </label>
       <br />
       <label>
-        <ContactPicker contacts={getContactName} name='contact' placeholder='Appointment with' value={contact} onChange={(e)=> setContact(e.target.value)} />
+        <input
+          type="time"
+          name="time"
+          value={time}
+          onChange={(e) => setTime(e.target.value)}
+          required
+        />
       </label>
-      
-      <button type='submit' value=' Add Appointment' />
+      <br />
+      <button type='submit'>Add Appointment</button>
 
     </form>
   );
