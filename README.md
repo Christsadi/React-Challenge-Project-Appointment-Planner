@@ -37,18 +37,18 @@ This project is open source. Personal logos and images should not be used withou
 - Google Chrome (browser)
 - Git and GitHub
 
-## Screenshots Part 1
+## Screenshots Contact page
 
 ![Example screenshot Contactpage](./public/ContactPage.jpg)
 
-## Screenshots Part 2
+## Screenshots Appointment page
 
 ![Example screenshot Appointmentpage](./public/AppointmentPage.jpg)
 
 ## Setup
 
 To navigate to the website use the following link:
-[Jammming web app](christsadi.github.io/jammming-jolllling)
+[Appointment planner](https://Christsadi.github.io/React-Challenge-Project-Appointment-Planner)
 
 You will find all the files and images which make up this website on this repository.
 
